@@ -66,7 +66,7 @@ fzf-file-widget() {
   return $ret
 }
 zle     -N   fzf-file-widget
-bindkey '^T' fzf-file-widget
+bindkey '^P' fzf-file-widget
 
 # ALT-C - cd into the selected directory
 fzf-cd-widget() {
@@ -87,7 +87,7 @@ fzf-cd-widget() {
   return $ret
 }
 zle     -N    fzf-cd-widget
-bindkey '\ec' fzf-cd-widget
+bindkey '^O' fzf-cd-widget
 
 # CTRL-R - Paste the selected command from history into the command line
 fzf-history-widget() {
@@ -106,7 +106,7 @@ fzf-history-widget() {
   return $ret
 }
 zle     -N   fzf-history-widget
-bindkey '^R' fzf-history-widget
+bindkey '^H' fzf-history-widget
 
 } always {
   eval $__fzf_key_bindings_options
